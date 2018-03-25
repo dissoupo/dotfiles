@@ -73,7 +73,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 | Ctrl-S     | Add's ``sudo`` to the beginning of the buffer. |
 | Ctrl-L     | Run's ``ls``. |
 | Ctrl-O     | Equivalent to hitting ``Enter``. |
-| Ctrl-R     | Updates recent dotfiles with ``git pull ``. |
+| Ctrl-D     | Updates recent dotfiles with `git pull`. |
 
 ### Plugins
 
@@ -92,7 +92,7 @@ On CentOS 7, `yum install vim-enhanced.x86_64`
 
 * Ctrl-B has been remapped to the backtick character (&#96;). If you want to type the actual backtick character (&#96;) itself, just hit the key twice.
 * `%` has been remapped to `v`.
-* Use vim movement keys for moving between panes.
+* Use `h,j,k,l` keys to resize panes.
 * Copy buffer is coppied to xclip.
 * `[` renamed to Tab.
 * Status bar tells you date, time, user, and hostname. Especially useful with nested ssh sessions.
