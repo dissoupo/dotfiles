@@ -5,15 +5,14 @@ prompt_install() {
 	answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
 	stty $old_stty_cfg && echo
 	if echo "$answer" | grep -iq "^y" ;then
-		# This could def use community support
-		if [ -x "$(command -v apt)" ]; then
-			sudo apt install $1 -y
+		if [ -x "$(command -v brew)" ]; then
+			brew install $1
 
 		elif [ -x "$(command -v yum)" ]; then
 			yum install $1
 
-		elif [ -x "$(command -v brew)" ]; then
-			brew install $1
+		elif [ -x "$(command -v apt)" ]; then
+			sudo apt install $1 -y
 
 		elif [ -x "$(command -v pkg)" ]; then
 			sudo pkg install $1
