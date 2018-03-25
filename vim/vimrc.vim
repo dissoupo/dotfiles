@@ -26,6 +26,7 @@
 
 	map <tab> %
 
+	set clipboard=unnamed
 	if has('unnamedplus')
 		set clipboard=unnamed,unnamedplus
 	endif

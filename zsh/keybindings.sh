@@ -69,4 +69,4 @@
 		zle end-of-line
 	}
 	zle -N update_dotfiles
-	bindkey "^r" update_dotfiles
+	bindkey "^d" update_dotfiles

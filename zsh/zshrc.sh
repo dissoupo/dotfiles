@@ -5,9 +5,19 @@
 	setopt share_history # setopt inc_append_history
 
 # Aliases
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+	alias v="vim -p"
+	alias vi="vim -p"
+	#alias xclip="~/dotfiles/bin/osx-xclip"
+  ;;
+  Linux)
 	alias v="vimx -p"
 	alias vi="vimx -p"
 	alias vim="vimx -p"
+  ;;
+esac
 
 	alias cls="clear"
 

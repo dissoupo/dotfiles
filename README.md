@@ -92,6 +92,7 @@ On CentOS 7, `yum install vim-enhanced.x86_64`
 
 * Ctrl-B has been remapped to the backtick character (&#96;). If you want to type the actual backtick character (&#96;) itself, just hit the key twice.
 * `%` has been remapped to `v`.
-* Use vim movement keys for moving between panes. 
+* Use vim movement keys for moving between panes.
 * Copy buffer is coppied to xclip.
-* Status bar tells you date, time, user, and hostname. Especially useful with nested ssh sessions. 
+* `[` renamed to Tab.
+* Status bar tells you date, time, user, and hostname. Especially useful with nested ssh sessions.
