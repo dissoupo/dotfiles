@@ -73,6 +73,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 | Ctrl-S     | Add's ``sudo`` to the beginning of the buffer. |
 | Ctrl-L     | Run's ``ls``. |
 | Ctrl-O     | Equivalent to hitting ``Enter``. |
+| Ctrl-R     | Updates recent dotfiles with ``git pull ``. |
 
 ### Plugins
 
@@ -84,6 +85,8 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 ## [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))
 
 * Leader key has ben remapped to `,`
+
+On CentOS 7, `yum install vim-enhanced.x86_64`
 
 ## [Tmux](https://en.wikipedia.org/wiki/Tmux)
 

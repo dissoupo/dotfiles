@@ -26,6 +26,11 @@
 
 	map <tab> %
 
+	if has('unnamedplus')
+		set clipboard=unnamed,unnamedplus
+	endif
+
+brew
 	set backspace=indent,eol,start
 
 	nnoremap <Space> za
@@ -36,7 +41,7 @@
 	set listchars=tab:\|\ 
 	nnoremap <leader><tab> :set list!<cr>
 	set pastetoggle=<F2>
-	set mouse=a
+"	set mouse=a
 	set incsearch
 
 " Language Specific
