@@ -1,25 +1,45 @@
 # Vars
 	HISTFILE=~/.zsh_history
-	SAVEHIST=1000 
-	setopt inc_append_history # To save every command before it is executed 
+	SAVEHIST=1000
+	setopt inc_append_history # To save every command before it is executed
 	setopt share_history # setopt inc_append_history
 
 # Aliases
-case `uname` in
-  Darwin)
-    # commands for OS X go here
-	alias v="vim -p"
-	alias vi="vim -p"
-	#alias xclip="~/dotfiles/bin/osx-xclip"
-  ;;
-  Linux)
-	alias v="vimx -p"
-	alias vi="vimx -p"
-	alias vim="vimx -p"
-  ;;
-esac
+    case `uname` in
+    Darwin)
+        # commands for OS X go here
+        alias v="vim -p"
+        alias vi="vim -p"
+        #alias xclip="~/dotfiles/bin/osx-xclip"
+    ;;
+    Linux)
+        if [[ "$(which vimx)" != "vimx not found" ]]; then
+            alias v="vimx -p"
+            alias vi="vimx -p"
+            alias vim="vimx -p"
+        else
+            alias v="vim -p"
+            alias vi="vim -p"
+        fi
+    ;;
+    esac
 
 	alias cls="clear"
+    alias ll='ls -alF'
+    alias la='ls -A'
+    alias l='ls -CF'
+
+    # enable color support of ls and also add handy aliases
+    if [ -x /usr/bin/dircolors ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        alias ls='ls --color=auto'
+        #alias dir='dir --color=auto'
+        #alias vdir='vdir --color=auto'
+
+        alias grep='grep --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+    fi
 
 	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
 	# alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
@@ -37,8 +57,10 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
 	}
 	alias cd="c"
 
-# For vim mappings: 
+# For vim mappings:
 	stty -ixon
+
+ZSH_THEME=af-magic
 
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh

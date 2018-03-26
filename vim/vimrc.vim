@@ -1,11 +1,12 @@
 " General Vim settings
+    colo koehler
 	syntax on
 	let mapleader=","
 	set autoindent
 	set tabstop=4
 	set shiftwidth=4
 	set dir=/tmp/
-	set relativenumber 
+	set relativenumber
 	set number
 
 	set cursorline
@@ -39,7 +40,7 @@ brew
 
 	nnoremap vv 0v$
 
-	set listchars=tab:\|\ 
+	set listchars=tab:\|\
 	nnoremap <leader><tab> :set list!<cr>
 	set pastetoggle=<F2>
 "	set mouse=a
@@ -49,7 +50,7 @@ brew
 	" General
 		inoremap <leader>for <esc>Ifor (int i = 0; i < <esc>A; i++) {<enter>}<esc>O<tab>
 		inoremap <leader>if <esc>Iif (<esc>A) {<enter>}<esc>O<tab>
-		
+
 
 	" Java
 		inoremap <leader>sys <esc>ISystem.out.println(<esc>A);
@@ -75,7 +76,7 @@ brew
 		inoremap <leader>< <esc>I<<esc>A><esc>yypa/<esc>O<tab>
 
 
-" File and Window Management 
+" File and Window Management
 	inoremap <leader>w <Esc>:w<CR>
 	nnoremap <leader>w :w<CR>
 
