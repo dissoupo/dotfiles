@@ -28,6 +28,9 @@
     alias ll='ls -alF'
     alias la='ls -A'
     alias l='ls -CF'
+    alias gs='git status'
+    alias gum='git checkout master; git pull; git checkout dev'
+    alias grm='git rebase -i upstream/master'
 
     # enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
