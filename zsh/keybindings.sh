@@ -48,7 +48,7 @@
 	zle -N ctrl_l
 	bindkey "^l" ctrl_l
 
-# Enter => Ctrl-0
+# Enter => Ctrl-o
 	function enter_line() {
 		zle accept-line
 	}
@@ -63,10 +63,10 @@
 	zle -N add_sudo
 	bindkey "^s" add_sudo
 
-# Update dotfile => Ctrl-d
+# Update dotfile => Ctrl-n
 	function update_dotfiles() {
 		BUFFER="(cd ~/dotfiles && git pull && git submodule update --init --recursive)"
 		zle end-of-line
 	}
 	zle -N update_dotfiles
-	bindkey "^d" update_dotfiles
+	bindkey "^n" update_dotfiles

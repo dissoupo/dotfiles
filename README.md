@@ -12,14 +12,15 @@ One of the key features is that this implementation stays in sync across all you
 
 * Little Customization: Just clone this repo and jump to [Installation](#installation).
 * Mild Customization: [Fork]() this repo, and clone your own fork. Keep an eye on this repo for bugfixes and other improvements that you'd like to incorporate into your fork. Then jump to [Installation](#installation).
-* Most Customization: Building your own dotfiles from scratch! Read through these docs, watch the video above, star this repo, and create your own dotfiles! You can add this repository as a [git module](https://git-scm.com/book/en/v2/Git-Tools-Submodules) and source the parts you like. 
+* Most Customization: Building your own dotfiles from scratch! Read through these docs, watch the video above, star this repo, and create your own dotfiles! You can add this repository as a [git module](https://git-scm.com/book/en/v2/Git-Tools-Submodules) and source the parts you like.
 
 If you're unsure, just read the docs, watch the video, clone this repository, and jump to [Installation](#installation).
 
 ## Installation
 
 Once the repo is cloned, execute the deploy script:
-```
+
+```.sh
 ./deploy
 ```
 
@@ -35,7 +36,7 @@ Pretty convenient for configuring new servers.
 
 # Sumary of Changes
 
-## Basic runtime opperations 
+## Basic runtime opperations
 
 All default dotfiles (`.zshrc`, `.vimrc`, etc) source something within the dotfiles repository. This helps separate changes that are synced across all your machines with system specific changes.
 
@@ -44,14 +45,14 @@ Upon launching a new shell, the first thing that's evaulated is `zshrc_manager.s
 ## [Zsh](https://en.wikipedia.org/wiki/Z_shell)
 
 * `cd` has been reassigned to `cd` and `ls`. Every time you navigate to a new directory, it will display the contents of that directory.
-* `v` has been aliased too: `vim -p`. This let's you open multiple files in vim as tabs. 
+* `v` has been aliased too: `vim -p`. This let's you open multiple files in vim as tabs.
 
 ### Prompt
 
 The prompt takes on the form:
 
-```
-[plugin, plugin, ...]: 
+```.sh
+[plugin, plugin, ...]:
 ```
 
 Each plugin is sensitive to where you are and what you're doing, they reveal themselves when it's contextually relevant. Plugins include:
@@ -64,6 +65,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 * `PID plugin`: appears when you background a task. Tells you what the PID of the task is.
 
 ### Keybindings
+
 | Key Stroke | What It Does |
 |------------|--------------|
 | Ctrl-H     | Runs ``cd ~/`` |
@@ -73,7 +75,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 | Ctrl-S     | Add's ``sudo`` to the beginning of the buffer. |
 | Ctrl-L     | Run's ``ls``. |
 | Ctrl-O     | Equivalent to hitting ``Enter``. |
-| Ctrl-D     | Updates recent dotfiles with `git pull`. |
+| Ctrl-N     | Updates recent dotfiles with `git pull`. |
 
 ### Plugins
 
