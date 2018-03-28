@@ -6,7 +6,7 @@
 	zle -N up_widget
 	bindkey "^k" up_widget
 
-# git => Ctrl-g
+# git => Ctrl-g + p
 	function git_prepare() {
 		if [ -n "$BUFFER" ];
 			then
@@ -17,14 +17,14 @@
 			then
 				BUFFER="git add -A; git commit -v && git push"
 		fi
-				
+
 		zle accept-line
 	}
 	zle -N git_prepare
-	bindkey "^g" git_prepare
+	bindkey "^gp" git_prepare
 
 # home => Ctrl-h
-	function goto_home() { 
+	function goto_home() {
 		BUFFER="cd ~/"$BUFFER
 		zle end-of-line
 		zle accept-line
@@ -63,10 +63,18 @@
 	zle -N add_sudo
 	bindkey "^s" add_sudo
 
-# Update dotfile => Ctrl-n
+# Update dotfile => Ctrl-z + d
 	function update_dotfiles() {
 		BUFFER="(cd ~/dotfiles && git pull && git submodule update --init --recursive)"
 		zle end-of-line
 	}
 	zle -N update_dotfiles
-	bindkey "^n" update_dotfiles
+	bindkey "^zd" update_dotfiles
+
+# Update zsh => Ctrl-z + r
+	function update_zsh() {
+		BUFFER="source ~/.zshrc"
+		zle end-of-line
+	}
+	zle -N update_zsh
+	bindkey "^zr" update_zsh

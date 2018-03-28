@@ -1,6 +1,6 @@
 # Awesome Dotfiles
 
-Simple, but extensive customization of ZSH, TMUX, and Vim. 
+Simple, but extensive customization of ZSH, TMUX, and Vim.
 
 [![VideoWalkthrough](https://img.youtube.com/vi/UgDz_9i2nwc/0.jpg)](https://www.youtube.com/watch?v=UgDz_9i2nwc)
 
@@ -26,7 +26,7 @@ Once the repo is cloned, execute the deploy script:
 
 This script guides you through the following:
 
-1. Checks to see if you have zsh, tmux, and vim installed. 
+1. Checks to see if you have zsh, tmux, and vim installed.
 2. Installs it using your default package manager if you don't have it installed.
 3. Checks to see if your default shell is zsh.
 4. Sets zsh to your default shell.
@@ -58,7 +58,7 @@ The prompt takes on the form:
 Each plugin is sensitive to where you are and what you're doing, they reveal themselves when it's contextually relevant. Plugins include:
 
 * `PWD plugin`: always present, tells you where you are. Always the first plugin.
-* `Status code plugin`: appears anytime a program returns with a non-zero status code. Tells you what status code the program completed with. 
+* `Status code plugin`: appears anytime a program returns with a non-zero status code. Tells you what status code the program completed with.
 * `Git plugin`: appears when you're in a git repository. Tells you what branch you're on, and how many files have been changed since the last commit.
 * `Sudo plugin`: tells you when you can sudo without a password. Or when you're logged in as root.
 * `Time plugin`: appears when a program took more than 1s to execute. Tells you how long it took to execute.
@@ -70,12 +70,13 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 |------------|--------------|
 | Ctrl-H     | Runs ``cd ~/`` |
 | Ctrl-K     | Runs ``cd ..`` |
-| Ctrl-G     | Runs ``git add -A; git commit -v && git push`` |
+| Ctrl-Z + g | Runs ``git add -A; git commit -v && git push`` |
 | Ctrl-V     | Runs ``fc``. Takes last command and puts it in a vim buffer. |
-| Ctrl-S     | Add's ``sudo`` to the beginning of the buffer. |
-| Ctrl-L     | Run's ``ls``. |
+| Ctrl-S     | Adds ``sudo`` to the beginning of the buffer. |
+| Ctrl-L     | Runs ``ls``. |
 | Ctrl-O     | Equivalent to hitting ``Enter``. |
-| Ctrl-N     | Updates recent dotfiles with `git pull`. |
+| Ctrl-Z + d | Updates recent dotfiles with `git pull`. |
+| Ctrl-Z + r | Reloads ``zsh``. |
 
 ### Plugins
 
@@ -94,6 +95,7 @@ On CentOS 7, `yum install vim-enhanced.x86_64`
 
 * Ctrl-B has been remapped to the backtick character (&#96;). If you want to type the actual backtick character (&#96;) itself, just hit the key twice.
 * `%` has been remapped to `v`.
+* `"` has been remapped to `h`.
 * Use `h,j,k,l` keys to resize panes.
 * Copy buffer is coppied to xclip.
 * `[` renamed to Tab.

@@ -28,9 +28,14 @@
     alias ll='ls -alF'
     alias la='ls -A'
     alias l='ls -CF'
-    alias gs='git status'
-    alias gum='git checkout master; git pull; git checkout dev'
-    alias grm='git rebase -i upstream/master'
+    alias rd='rm -rf'
+
+    # Alias definitions.
+    # You may want to put all your additions into a separate file like
+    # ~/.user_aliases, instead of adding them here directly.
+    if [ -f ~/.user_aliases ]; then
+        source ~/.user_aliases
+    fi
 
     # enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
