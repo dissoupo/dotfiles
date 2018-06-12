@@ -104,3 +104,37 @@ brew
 	"Swap line
 	"Insert blank below and above
 
+" Tabs
+	nnoremap <A-F1> 1gt
+	nnoremap <A-F2> 2gt
+	nnoremap <A-F3> 3gt
+	nnoremap <A-F4> 4gt
+	nnoremap <A-F5> 5gt
+	nnoremap <A-F6> 6gt
+	nnoremap <A-F7> 7gt
+	nnoremap <A-F8> 8gt
+	nnoremap <A-F9> 9gt
+	nnoremap <A-F0> 10gt
+
+	nnoremap <C-S-tab> :tabprevious<CR>
+	nnoremap <C-tab>   :tabnext<CR>
+	nnoremap <C-t>     :tabnew<CR>
+
+" Plugins
+	
+	if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	endif
+
+	call plug#begin('~/.vim/plugged')
+
+	Plug 'tpope/vim-sensible'
+	Plug 'scrooloose/nerdtree'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+
+	call plug#end()
+
+	map <C-n> :NERDTreeToggle<CR>
+	"autocmd vimenter * NERDTree
