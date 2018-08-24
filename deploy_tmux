@@ -35,9 +35,6 @@ check_for_software() {
 	fi
 }
 
-echo "Checking/updating dependencies..."
-git submodule update --init
-
 echo
 echo "We're going to do the following:"
 echo "1. Check to make sure you have tmux installed"
