@@ -42,6 +42,7 @@ brew
 
 	set listchars=tab:\|\
 	nnoremap <leader><tab> :set list!<cr>
+	set paste
 	set pastetoggle=<F2>
 "	set mouse=a
 	set incsearch
@@ -136,5 +137,5 @@ brew
 
 	call plug#end()
 
-	map <C-n> :NERDTreeToggle<CR>
+	map <C-f> :NERDTreeToggle<CR>
 	"autocmd vimenter * NERDTree
