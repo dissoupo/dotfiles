@@ -7,7 +7,12 @@
 	set shiftwidth=4
 	set dir=/tmp/
 	set relativenumber
-	set number
+"	set number
+	set pastetoggle=<F2>
+	set paste
+	set noai
+	set noautoindent 
+	set mouse=r
 
 	set cursorline
 	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
@@ -42,9 +47,10 @@ brew
 
 	set listchars=tab:\|\
 	nnoremap <leader><tab> :set list!<cr>
-	set paste
 	set pastetoggle=<F2>
-"	set mouse=a
+	set noai
+	set noautoindent 
+	set mouse=r
 	set incsearch
 
 " Language Specific
