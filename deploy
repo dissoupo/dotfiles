@@ -74,6 +74,8 @@ else
 	exit 0
 fi
 
+echo "installing zinit"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 check_for_software zsh
 echo

@@ -29,6 +29,9 @@
     alias la='ls -A'
     alias l='ls -CF'
     alias rd='rm -rf'
+    alias k='kubectl'
+    alias kx='kubectx'
+    alias kn='kubens'
 
     # Alias definitions.
     # You may want to put all your additions into a separate file like
@@ -70,6 +73,18 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
 
 ZSH_THEME=af-magic
 
+# TODO: refactor plugins to zinitcls
+# source ~/.zinit/bin/zinit.zsh
+
+# Two regular plugins loaded without investigating.
+# zinit light zsh-users/zsh-autosuggestions
+# zinit light zdharma/fast-syntax-highlighting
+
+# Plugin history-search-multi-word loaded with investigating.
+# zinit load zdharma/history-search-multi-word
+
+# zplugin light jonmosco/kube-ps1
+
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
 source ~/dotfiles/zsh/plugins/vi-mode.plugin.zsh
@@ -94,3 +109,5 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 source ~/dotfiles/zsh/prompt.sh
+
+unsetopt nomatch
